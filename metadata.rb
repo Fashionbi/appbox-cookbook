@@ -4,11 +4,13 @@ maintainer_email "teohuiming@gmail.com"
 license          "Apache License 2.0"
 description      "Provides a set of recipes to setup a base app server"
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          "0.1.1"
+version          "0.1.2"
 
 supports "ubuntu"
 supports "debian"
+supports "centos"
 
+depends "yum"
 depends "apt"
 depends "sudo"
 depends "user"

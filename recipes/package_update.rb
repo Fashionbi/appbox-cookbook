@@ -2,8 +2,11 @@
 # Cookbook Name:: appbox
 # Recipe:: package_update
 #
-# Update apt-get packages.
 #
 
-include_recipe "apt"
-
+case node['platform_family']
+when 'rhel','fedora'
+    include_recipe "yum"
+when 'debian'
+    include_recipe "apt"
+end
